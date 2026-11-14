@@ -8,6 +8,7 @@ Members of a DAO pool the same amount every round, and each round one of them ta
 - **Track:** Social Money (`social`)
 - **Built on:** Sputnik DAO v2, NEAR named accounts, near.social (FastData KV), Trezu's proposal description format
 - **Network:** NEAR testnet
+- **Live site (read-only):** https://sreedcwn.github.io/kitty/
 - **Contract:** [`v1.kitty-hq.testnet`](https://testnet.nearblocks.io/address/v1.kitty-hq.testnet)
 - **Demo DAO:** [`banyan.sputnikv2.testnet`](https://testnet.nearblocks.io/address/banyan.sputnikv2.testnet) ("Banyan Co-op"), members `*.banyan-coop.testnet`
 - **Demo video:** [`demo/kitty-demo.mp4`](demo/kitty-demo.mp4), recorded from the real site against live testnet. The narration is an AI voice.
@@ -65,9 +66,9 @@ The Social Money prompt describes a bounty board with earned trust. Kitty applie
 
 ## Try it
 
-You need Node.js 20 or later. Nothing below needs a key or a wallet.
+Nothing below needs a key or a wallet. Running the site or the scripts yourself needs Node.js 20 or later.
 
-1. `npm install`, then `node scripts/serve.mjs`, then open http://127.0.0.1:4173. **See** the board: "Banyan Co-op" with its treasury, and circles. Every number is read from testnet when the page draws.
+1. Open https://sreedcwn.github.io/kitty/ (or run it yourself: `npm install`, then `node scripts/serve.mjs`, then open http://127.0.0.1:4173). **See** the board: "Banyan Co-op" with its treasury, and circles. Every number is read from testnet when the page draws.
 2. Click the finished circle **December rent**. **See** four seats in payout order. The last column shows what each took: Priya's 0.4 NEAR bar is three-quarters gold (credit), Ama's 0.2 NEAR has a grey part (held back). **See** "Covers Banyan Co-op paid in this circle": proposal #5, Approved, filed by `v1.kitty-hq.testnet`, with Kitty's vote.
 3. Scroll down. **See** the circle's near.social thread: 8 posts by the contract, each mentioning members by name (names come from their near.social profiles).
 4. Click **Priya Raman**. **See** her record: credit 0.3 NEAR, one miss, every entry with its circle, round and block, including the cover and her repayment.

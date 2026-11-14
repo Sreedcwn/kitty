@@ -14,7 +14,7 @@ Deadline: 14 November 2026, 23:59 UTC. Judging: 16 to 18 November.
 - [ ] Track selected: `social`.
 - [ ] Submitted once, before the deadline, at <https://nearhackathon.com/#apply>.
 - [ ] The testnet demo stays as it is until 18 November, ideally 25 November. `node scripts/verify.mjs` should keep saying "Everything checks out."
-- [ ] Optional, a hosted read-only copy: in the repository's Settings, under Pages, choose GitHub Actions. `.github/workflows/pages.yml` publishes `web/`.
+- [x] A hosted read-only copy: https://sreedcwn.github.io/kitty/, published from `web/` by `.github/workflows/pages.yml` (GitHub Pages, source: GitHub Actions).
 
 ## The tweet
 
