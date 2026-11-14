@@ -18,12 +18,10 @@ Deadline: 14 November 2026, 23:59 UTC. Judging: 16 to 18 November.
 
 ## The tweet
 
-Attach `demo/kitty-demo.mp4`. 277 characters as X counts them (a link counts as 23).
+Attach `demo/kitty-demo.mp4`. 179 characters as X counts them (a link counts as 23).
 
 ```text
-Savings circles run on trust: early takers can stop paying.
-
-Kitty puts them on NEAR. Paying on time earns credit a Sputnik DAO backs, a miss becomes a DAO proposal, each circle a near.social thread.
+Savings circles run on trust. Kitty puts them on NEAR, with your DAO backing members who pay on time.
 
 Built at NEAR HACKATHON @NEARProtocol #NEARHackathon
 https://github.com/Sreedcwn/kitty
