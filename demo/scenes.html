@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kitty title cards</title>
+    <style>
+      :root { --bg: #fbf6ee; --ink: #1d1913; --muted: #6f665a; --accent: #d9480f; --credit: #e8a317; --cash: #2b8a3e; --hold: #8d99ae; --bad: #c2255c; }
+      html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: "Segoe UI", system-ui, sans-serif; overflow: hidden; }
+      .scene { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; flex-direction: column; gap: 28px; text-align: center; padding-bottom: 190px; box-sizing: border-box; }
+      .scene.on { display: flex; }
+      h1 { font-size: 58px; line-height: 1.12; margin: 0; letter-spacing: -0.02em; max-width: 1000px; }
+      h2 { font-size: 40px; line-height: 1.2; margin: 0; font-weight: 600; max-width: 980px; }
+      p { font-size: 24px; color: var(--muted); margin: 0; max-width: 900px; }
+      .names { display: flex; gap: 18px; font-size: 26px; color: var(--muted); }
+      .names span { background: #fff; border: 1px solid #eadfce; border-radius: 999px; padding: 8px 20px; opacity: 0; animation: in 0.6s ease-out forwards; }
+      .names span:nth-child(2) { animation-delay: 0.7s; }
+      .names span:nth-child(3) { animation-delay: 1.4s; }
+      .names span:nth-child(4) { animation-delay: 2.1s; }
+      .names span:nth-child(5) { animation-delay: 2.8s; }
+      @keyframes in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+      svg text { font-family: "Segoe UI", system-ui, sans-serif; }
+      .logo { width: 88px; height: 88px; border-radius: 50%; background: var(--accent); box-shadow: inset 0 0 0 20px var(--accent), inset 0 0 0 32px #fff6e8; }
+      .brand { display: flex; align-items: center; gap: 24px; font-size: 96px; font-weight: 750; letter-spacing: -0.03em; }
+      .chips { display: flex; gap: 14px; }
+      .chips span { font-size: 22px; background: #fff; border: 1px solid #eadfce; border-radius: 12px; padding: 10px 18px; }
+      .small { font-size: 18px; color: var(--muted); }
+      .pot { transition: transform 0.9s cubic-bezier(.6,0,.3,1); }
+    </style>
+  </head>
+  <body>
+    <!-- 1: the idea, everywhere -->
+    <section class="scene" id="intro1">
+      <h1>People have saved together for centuries.</h1>
+      <div class="names"><span>chit fund · India</span><span>tanda · Mexico</span><span>susu · Ghana</span><span>hui · China</span><span>kye · Korea</span></div>
+    </section>
+
+    <!-- 2: how a circle works -->
+    <section class="scene" id="intro2">
+      <svg width="520" height="420" viewBox="0 0 520 420">
+        <g id="seats"></g>
+        <g class="pot" id="pot"><circle r="46" fill="#e8a317" /><text y="8" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">pot</text></g>
+      </svg>
+      <h2>Everyone pays in every round. One member takes the whole pot, in turn.</h2>
+    </section>
+
+    <!-- 3: the weakness -->
+    <section class="scene" id="intro3">
+      <svg width="520" height="380" viewBox="0 0 520 380" id="gone"></svg>
+      <h2>Whoever takes the pot early can stop paying.</h2>
+    </section>
+
+    <!-- 4: brand -->
+    <section class="scene" id="brand">
+      <div class="brand"><span class="logo"></span>Kitty</div>
+      <h2>Savings circles on NEAR, backed by your community's DAO.</h2>
+    </section>
+
+    <!-- 5: close 1 -->
+    <section class="scene" id="close1">
+      <h1>Small covers: Kitty's one vote.<br />Large covers: the council.</h1>
+      <p>The treasury, the council and its votes stay in Sputnik DAO. Kitty holds no DAO money and has no multisig of its own.</p>
+    </section>
+
+    <!-- 6: close 2 -->
+    <section class="scene" id="close2">
+      <div class="brand"><span class="logo"></span>Kitty</div>
+      <h2>Savings circles your community stands behind.</h2>
+      <div class="chips"><span>Sputnik DAO</span><span>NEAR named accounts</span><span>near.social</span></div>
+      <div class="small">Live on NEAR testnet with test tokens. The narration is an AI voice. Built at NEAR HACKATHON 2026.</div>
+    </section>
+
+    <script>
+      const s = new URLSearchParams(location.search).get("s") || "intro1";
+      document.getElementById(s)?.classList.add("on");
+      const NS = "http://www.w3.org/2000/svg";
+      const people = [["P", "#3b5bdb"], ["A", "#2b8a3e"], ["T", "#5f3dc4"], ["L", "#c2255c"]];
+      const at = (i, r, cx, cy) => [cx + r * Math.cos((i / 4) * 2 * Math.PI - Math.PI / 2), cy + r * Math.sin((i / 4) * 2 * Math.PI - Math.PI / 2)];
+      function seat(g, i, cx, cy, r, faded) {
+        const [x, y] = at(i, r, cx, cy);
+        const c = document.createElementNS(NS, "circle");
+        c.setAttribute("cx", x); c.setAttribute("cy", y); c.setAttribute("r", 40); c.setAttribute("fill", people[i][1]);
+        if (faded) c.setAttribute("opacity", "0.35");
+        const t = document.createElementNS(NS, "text");
+        t.setAttribute("x", x); t.setAttribute("y", y + 10); t.setAttribute("text-anchor", "middle"); t.setAttribute("font-size", "30"); t.setAttribute("font-weight", "700"); t.setAttribute("fill", "#fff");
+        t.textContent = people[i][0];
+        g.append(c, t);
+        return [x, y];
+      }
+      if (s === "intro2") {
+        const g = document.getElementById("seats");
+        const pts = people.map((_, i) => seat(g, i, 260, 210, 160));
+        const pot = document.getElementById("pot");
+        pot.setAttribute("transform", "translate(260 210)");
+        let k = 0;
+        const step = () => {
+          const [x, y] = pts[k % 4];
+          pot.style.transform = `translate(${x}px, ${y}px) scale(0.7)`;
+          setTimeout(() => { pot.style.transform = `translate(260px, 210px)`; }, 900);
+          k++;
+        };
+        pot.style.transform = "translate(260px, 210px)";
+        setTimeout(step, 500); setTimeout(step, 2300); setTimeout(step, 4100);
+      }
+      if (s === "intro3") {
+        const g = document.getElementById("gone");
+        seat(g, 1, 260, 190, 140); seat(g, 2, 260, 190, 140); seat(g, 3, 260, 190, 140);
+        const [x, y] = at(0, 140, 260, 190);
+        const c = document.createElementNS(NS, "g");
+        c.innerHTML = `<circle cx="${x}" cy="${y}" r="40" fill="#3b5bdb"/><text x="${x}" y="${y + 10}" text-anchor="middle" font-size="30" font-weight="700" fill="#fff">P</text>`;
+        c.style.transition = "transform 1.6s ease-in, opacity 1.6s ease-in";
+        g.append(c);
+        const q = document.createElementNS(NS, "text");
+        q.setAttribute("x", 260); q.setAttribute("y", 205); q.setAttribute("text-anchor", "middle"); q.setAttribute("font-size", "44"); q.setAttribute("fill", "#c2255c"); q.setAttribute("font-weight", "700");
+        q.textContent = "?"; q.setAttribute("opacity", "0"); q.style.transition = "opacity .6s";
+        g.append(q);
+        setTimeout(() => { c.style.transform = "translate(260px, -120px)"; c.style.opacity = "0"; }, 700);
+        setTimeout(() => q.setAttribute("opacity", "1"), 2000);
+      }
+    </script>
+  </body>
+</html>

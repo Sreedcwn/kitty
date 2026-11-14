@@ -1,0 +1,20 @@
+{
+  "name": "kitty",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Rotating savings circles on NEAR, backed by a Sputnik DAO: a member's record of paid dues becomes credit the community stands behind.",
+  "license": "MIT",
+  "scripts": {
+    "site": "node scripts/serve.mjs",
+    "deploy": "node scripts/deploy.mjs",
+    "e2e": "node scripts/e2e.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "dependencies": {
+    "near-api-js": "^7.4.0"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.65.0"
+  }
+}

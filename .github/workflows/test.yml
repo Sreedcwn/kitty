@@ -1,0 +1,16 @@
+# Runs the contract's unit tests on every push.
+name: Contract tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: contract
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - run: cargo test
+      - run: cargo build --release --target wasm32-unknown-unknown

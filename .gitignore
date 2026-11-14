@@ -1,0 +1,7 @@
+node_modules/
+contract/target/
+demo/out/
+.env
+.env.*
+.claude/
+*.log

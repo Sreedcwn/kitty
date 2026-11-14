@@ -1,0 +1,149 @@
+[
+ {
+  "id": "01",
+  "text": "All over the world, people save in rotating circles: a chit fund, a tanda, a susu.",
+  "tts": "All over the world, people save in rotating circles. A chit fund, a tanda, a soosoo.",
+  "ex": 0.55,
+  "cfg": 0.45
+ },
+ {
+  "id": "02",
+  "text": "Everyone pays the same amount each round, and one member takes the whole pot, in turn.",
+  "tts": "Everyone pays the same amount each round, and one member takes the whole pot, in turn.",
+  "ex": 0.55,
+  "cfg": 0.45
+ },
+ {
+  "id": "03",
+  "text": "It runs on trust. Whoever takes the pot early can stop paying, and the others lose.",
+  "tts": "It runs on trust. Whoever takes the pot early can stop paying. And the others lose.",
+  "ex": 0.65,
+  "cfg": 0.4
+ },
+ {
+  "id": "04",
+  "text": "Kitty puts these circles on NEAR, and lets a community's DAO stand behind its members.",
+  "tts": "Kitty puts these circles on near, and lets a community's DAO stand behind its members.",
+  "ex": 0.6,
+  "cfg": 0.4
+ },
+ {
+  "id": "05",
+  "text": "This is Banyan Co-op, a Sputnik DAO, live on testnet. Its council voted once on Kitty's terms.",
+  "tts": "This is Banyan Co-op, a Sputnik DAO, live on testnet. Its council voted once, on Kitty's terms.",
+  "ex": 0.5,
+  "cfg": 0.45
+ },
+ {
+  "id": "06",
+  "text": "A member's credit is what they paid on time in circles they finished, and the DAO caps it.",
+  "tts": "A member's credit is what they paid on time, in circles they finished. And the DAO caps it.",
+  "ex": 0.5,
+  "cfg": 0.45
+ },
+ {
+  "id": "07",
+  "text": "Priya starts a circle for December rent, with Ama, Tomás and Lin. A tenth of a NEAR a round.",
+  "tts": "Priya starts a circle for December rent, with Ama, Tomas, and Lin. A tenth of a near, a round.",
+  "ex": 0.5,
+  "cfg": 0.45
+ },
+ {
+  "id": "08",
+  "text": "Each seat shows what that member gets in their turn. Priya finished a circle before, so she can take the full pot first.",
+  "tts": "Each seat shows what that member gets in their turn. Priya finished a circle before, so she can take the full pot, first.",
+  "ex": 0.5,
+  "cfg": 0.45
+ },
+ {
+  "id": "09",
+  "text": "Ama is new. She gets her own money now, and the rest is held back for her later dues. Nobody in the circle can lose.",
+  "tts": "Ama is new. She gets her own money now, and the rest is held back, for her later dues. Nobody in the circle can lose.",
+  "ex": 0.55,
+  "cfg": 0.42
+ },
+ {
+  "id": "10",
+  "text": "Everyone takes their seat, and round one is paid.",
+  "tts": "Everyone takes their seat, and round one is paid.",
+  "ex": 0.5,
+  "cfg": 0.45
+ },
+ {
+  "id": "11",
+  "text": "Priya takes the whole pot: 0.4 NEAR, three quarters of it on credit.",
+  "tts": "Priya takes the whole pot. Zero point four near, three quarters of it on credit.",
+  "ex": 0.55,
+  "cfg": 0.42
+ },
+ {
+  "id": "12",
+  "text": "Every step is a post in the circle's NEAR Social thread, written by the contract. Mentions notify each member when their dues are due.",
+  "tts": "Every step is a post in the circle's near social thread, written by the contract. Mentions notify each member, when their dues are due.",
+  "ex": 0.5,
+  "cfg": 0.45
+ },
+ {
+  "id": "13",
+  "text": "Round two goes to Ama: half now, half held back.",
+  "tts": "Round two goes to Ama. Half now, half held back.",
+  "ex": 0.55,
+  "cfg": 0.42
+ },
+ {
+  "id": "14",
+  "text": "In round three, Priya doesn't pay. The deadline passes.",
+  "tts": "In round three, Priya doesn't pay. The deadline passes.",
+  "ex": 0.65,
+  "cfg": 0.4
+ },
+ {
+  "id": "15",
+  "text": "Kitty files an ordinary proposal on the DAO for exactly the missing dues, and passes it with the one vote the council gave it for small covers.",
+  "tts": "Kitty files an ordinary proposal on the DAO, for exactly the missing dues. And passes it with the one vote the council gave it, for small covers.",
+  "ex": 0.5,
+  "cfg": 0.45
+ },
+ {
+  "id": "16",
+  "text": "And Tomás still gets the full pot.",
+  "tts": "And Tomas, still gets the full pot.",
+  "ex": 0.6,
+  "cfg": 0.42
+ },
+ {
+  "id": "17",
+  "text": "Priya now owes the DAO, and her credit is zero until she repays.",
+  "tts": "Priya now owes the DAO. And her credit is zero, until she repays.",
+  "ex": 0.55,
+  "cfg": 0.42
+ },
+ {
+  "id": "18",
+  "text": "She repays, and her credit is back. Every line of her record is on chain.",
+  "tts": "She repays, and her credit is back. Every line of her record is on chain.",
+  "ex": 0.55,
+  "cfg": 0.42
+ },
+ {
+  "id": "19",
+  "text": "Lin takes the last pot. The circle is complete, and everyone who paid on time has a bigger record.",
+  "tts": "Lin takes the last pot. The circle is complete. And everyone who paid on time, has a bigger record.",
+  "ex": 0.55,
+  "cfg": 0.42
+ },
+ {
+  "id": "20",
+  "text": "Larger covers wait for the council, like any proposal. The treasury never leaves the DAO.",
+  "tts": "Larger covers wait for the council, like any proposal. The treasury never leaves the DAO.",
+  "ex": 0.5,
+  "cfg": 0.45
+ },
+ {
+  "id": "21",
+  "text": "Kitty. Savings circles your community stands behind.",
+  "tts": "Kitty. Savings circles your community stands behind.",
+  "ex": 0.6,
+  "cfg": 0.42
+ }
+]

@@ -1,0 +1,262 @@
+{
+  "attacks": {
+    "ran_at": "2026-11-13T18:01:02.014Z",
+    "contract": "v1.kitty-hq.testnet",
+    "dao": "banyan.sputnikv2.testnet",
+    "checks": [
+      {
+        "name": "an account that is not a factory DAO cannot set terms",
+        "ok": true,
+        "detail": "ERR_NOT_DAO: only a DAO made by the factory can set terms, through a proposal",
+        "link": "https://testnet.nearblocks.io/txns/7G3JaL52oNzKpgkR2s9s4AddjJSnFnzYJ7b8vh9eFg6P"
+      },
+      {
+        "name": "a circle with someone outside the DAO's roles is refused, deposit returned",
+        "ok": true,
+        "detail": "ERR_NOT_MEMBER: kitty-fund2.testnet not in the DAO's roles council, members. Your deposit was returned.",
+        "link": "https://testnet.nearblocks.io/txns/8mMZuNu3q4bh81s9GkTBreeUPpiiNd5w4jET7y386HSq"
+      },
+      {
+        "name": "dues above the DAO's max_dues are refused",
+        "ok": true,
+        "detail": "ERR_DUES: above zero and at most the DAO's max_dues",
+        "link": "https://testnet.nearblocks.io/txns/5m9p5vj7eKgJyoQgftKhHs32wFbMtkf6eazj79JnJ2qt"
+      },
+      {
+        "name": "receive_cover from anyone but the circle's DAO is refused",
+        "ok": true,
+        "detail": "ERR_NOT_DAO: covers come from the circle's DAO",
+        "link": "https://testnet.nearblocks.io/txns/DGxe8L8HTz9qqXeeVMArCmwNxZ6daNtXojqRHf8kQnVn"
+      },
+      {
+        "name": "repaying with no debt is refused, deposit returned",
+        "ok": true,
+        "detail": "ERR_NO_DEBT: you owe nothing",
+        "link": "https://testnet.nearblocks.io/txns/7oHcvwYKn57oM98BkuYCzvWHn2NiXq1NNRAMhQH7bbBx"
+      }
+    ],
+    "passed": 5,
+    "failed": 0
+  },
+  "auto": {
+    "ran_at": "2026-11-13T18:01:21.905Z",
+    "contract": "v1.kitty-hq.testnet",
+    "dao": "banyan.sputnikv2.testnet",
+    "checks": [
+      {
+        "name": "rosa starts with credit from the seed circle",
+        "ok": true,
+        "detail": "0.3 NEAR",
+        "link": null
+      },
+      {
+        "name": "create \"E2E small covers 82592\"",
+        "ok": true,
+        "detail": "circle #1",
+        "link": "https://testnet.nearblocks.io/txns/9bCxMEVBnfYJQSwv6qEjpHYg3pVjokDTyWeeG83rUui8"
+      },
+      {
+        "name": "every seat taken starts round 1",
+        "ok": true,
+        "detail": "",
+        "link": null
+      },
+      {
+        "name": "closing before the deadline with dues owed is refused",
+        "ok": true,
+        "detail": "ERR_TOO_EARLY: someone has not paid and the round is still open",
+        "link": "https://testnet.nearblocks.io/txns/CfX6EmoB7ev3QERvgJswmo5SnUfvrKxHjt8gBRn4FBVz"
+      },
+      {
+        "name": "round 1 closes past the deadline",
+        "ok": true,
+        "detail": "",
+        "link": "https://testnet.nearblocks.io/txns/9QksQaQDG8bAtmUjtt1rxHqqL3hZpw94hbyg5WFsyBqU"
+      },
+      {
+        "name": "Kitty filed a cover proposal on the DAO",
+        "ok": true,
+        "detail": 2,
+        "link": null
+      },
+      {
+        "name": "the cover passed with Kitty's own vote and the round paid out",
+        "ok": true,
+        "detail": "log: {\"round\":1,\"recipient\":\"rosa.banyan-coop.testnet\",\"pot\":\"300000000000000000000000\",\"recovered\":\"0\",\"backed\":\"200000000000000000000000\",\"holdback\":\"0\",\"paid\":\"300000000000000000000000\",\"covered\":\"100000000000000000000000\",\"cover_proposal\":2,\"short\":\"0\",\"closed_ms\":1794592938222}",
+        "link": null
+      },
+      {
+        "name": "proposal #2 is Approved, filed and voted by v1.kitty-hq.testnet",
+        "ok": true,
+        "detail": "Approved",
+        "link": null
+      },
+      {
+        "name": "rosa took the full pot early: credit replaced holdback",
+        "ok": true,
+        "detail": "0.3 paid, 0.2 credit",
+        "link": null
+      },
+      {
+        "name": "kofi owes the DAO the covered dues",
+        "ok": true,
+        "detail": "",
+        "link": null
+      },
+      {
+        "name": "round 2 closes as soon as everyone paid",
+        "ok": true,
+        "detail": "",
+        "link": "https://testnet.nearblocks.io/txns/SAeqsACN512rCnjsmPXycy6YUPYh1Yd6eBGMe13fdnq"
+      },
+      {
+        "name": "kofi's debt came out of his own pot",
+        "ok": true,
+        "detail": "paid 0.1, recovered 0.1, held back 0.1",
+        "link": null
+      },
+      {
+        "name": "kofi owes nothing now",
+        "ok": true,
+        "detail": "",
+        "link": null
+      },
+      {
+        "name": "round 3 closes past the deadline",
+        "ok": true,
+        "detail": "",
+        "link": "https://testnet.nearblocks.io/txns/GQDQdmeGsvSGhotTvYXESqVZXngo7gEWtbmWZP4k6dB8"
+      },
+      {
+        "name": "the circle finished",
+        "ok": true,
+        "detail": "",
+        "link": null
+      },
+      {
+        "name": "lin, the last seat, got the full pot",
+        "ok": true,
+        "detail": "",
+        "link": null
+      },
+      {
+        "name": "rosa owes the DAO and her credit is zero",
+        "ok": true,
+        "detail": "credit 0",
+        "link": null
+      },
+      {
+        "name": "the DAO's book shows two covers and one debt outstanding",
+        "ok": true,
+        "detail": "debts 0.1",
+        "link": null
+      },
+      {
+        "name": "rosa repays and her credit is back",
+        "ok": true,
+        "detail": "",
+        "link": "https://testnet.nearblocks.io/txns/5RrPGLTS4YgU6sXxok9au7qEZZdyEYdNCvu6wpc8CK3B"
+      },
+      {
+        "name": "the DAO got all its covers back",
+        "ok": true,
+        "detail": "",
+        "link": null
+      },
+      {
+        "name": "the DAO stands behind nothing for this circle",
+        "ok": true,
+        "detail": "",
+        "link": null
+      }
+    ],
+    "scenarioA": {
+      "circle": 1,
+      "proposals": [
+        2,
+        3
+      ],
+      "links": [
+        "https://testnet.nearblocks.io/txns/9QksQaQDG8bAtmUjtt1rxHqqL3hZpw94hbyg5WFsyBqU",
+        "https://testnet.nearblocks.io/txns/SAeqsACN512rCnjsmPXycy6YUPYh1Yd6eBGMe13fdnq",
+        "https://testnet.nearblocks.io/txns/GQDQdmeGsvSGhotTvYXESqVZXngo7gEWtbmWZP4k6dB8",
+        "https://testnet.nearblocks.io/txns/5RrPGLTS4YgU6sXxok9au7qEZZdyEYdNCvu6wpc8CK3B"
+      ]
+    },
+    "passed": 21,
+    "failed": 0
+  },
+  "council": {
+    "ran_at": "2026-11-13T18:03:32.123Z",
+    "contract": "v1.kitty-hq.testnet",
+    "dao": "banyan.sputnikv2.testnet",
+    "checks": [
+      {
+        "name": "create \"E2E council cover 12126\"",
+        "ok": true,
+        "detail": "circle #2",
+        "link": "https://testnet.nearblocks.io/txns/J7uGdxayBfiZ2jNW3nzs3wLMt6sSx4NYRNSzcg5vqSwR"
+      },
+      {
+        "name": "every seat taken starts round 1",
+        "ok": true,
+        "detail": "",
+        "link": null
+      },
+      {
+        "name": "round 1 closes and files a cover",
+        "ok": true,
+        "detail": "",
+        "link": "https://testnet.nearblocks.io/txns/FPLooDQZw3sE5g25y6DmRo9CMv4VTcShe2rpBsoV98h7"
+      },
+      {
+        "name": "a 0.3 NEAR cover is above the 0.25 auto limit, so the circle waits",
+        "ok": true,
+        "detail": "",
+        "link": null
+      },
+      {
+        "name": "proposal #4 is open with no vote from Kitty",
+        "ok": true,
+        "detail": "",
+        "link": null
+      },
+      {
+        "name": "closing again before the council acts is refused",
+        "ok": true,
+        "detail": "ERR_WAITING: waiting for the DAO to pass cover proposal #4. After 600s it pays out short.",
+        "link": null
+      },
+      {
+        "name": "two council votes pass it",
+        "ok": true,
+        "detail": "",
+        "link": "https://testnet.nearblocks.io/txns/Hikb5q7ZzYbZRni2mmPTSMWJfKwduBmtoUZCZLttb5pd"
+      },
+      {
+        "name": "the DAO ran receive_cover and the pot paid tomas in full",
+        "ok": true,
+        "detail": "Approved",
+        "link": null
+      },
+      {
+        "name": "kofi's pot repaid the council's cover",
+        "ok": true,
+        "detail": "",
+        "link": "https://testnet.nearblocks.io/txns/26hSfn6i2GGZWXD6oiLuZoa1i77mGie6eqTrAtbKWyrW"
+      }
+    ],
+    "scenarioB": {
+      "circle": 2,
+      "proposal": 4,
+      "links": [
+        "https://testnet.nearblocks.io/txns/FPLooDQZw3sE5g25y6DmRo9CMv4VTcShe2rpBsoV98h7",
+        "https://testnet.nearblocks.io/txns/AfX6oKBBZ6t1atZJnUNb5pjHwGVe69kvg8JWuhgoWTMf",
+        "https://testnet.nearblocks.io/txns/Hikb5q7ZzYbZRni2mmPTSMWJfKwduBmtoUZCZLttb5pd",
+        "https://testnet.nearblocks.io/txns/26hSfn6i2GGZWXD6oiLuZoa1i77mGie6eqTrAtbKWyrW"
+      ]
+    },
+    "passed": 9,
+    "failed": 0
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "network": "testnet",
+  "contract": "v1.kitty-hq.testnet",
+  "social": "social.testnet",
+  "factory": "sputnikv2.testnet",
+  "dao": "banyan.sputnikv2.testnet",
+  "label": "Banyan Co-op",
+  "namespace": "banyan-coop.testnet",
+  "people": {
+    "priya.banyan-coop.testnet": {
+      "name": "Priya Raman",
+      "role": "council",
+      "short": "priya"
+    },
+    "tomas.banyan-coop.testnet": {
+      "name": "Tomás Ortega",
+      "role": "council",
+      "short": "tomas"
+    },
+    "rosa.banyan-coop.testnet": {
+      "name": "Rosa Lindqvist",
+      "role": "council",
+      "short": "rosa"
+    },
+    "ama.banyan-coop.testnet": {
+      "name": "Ama Mensah",
+      "role": "members",
+      "short": "ama"
+    },
+    "lin.banyan-coop.testnet": {
+      "name": "Lin Wei",
+      "role": "members",
+      "short": "lin"
+    },
+    "kofi.banyan-coop.testnet": {
+      "name": "Kofi Boateng",
+      "role": "members",
+      "short": "kofi"
+    }
+  },
+  "council": [
+    "priya.banyan-coop.testnet",
+    "tomas.banyan-coop.testnet",
+    "rosa.banyan-coop.testnet"
+  ],
+  "members": [
+    "ama.banyan-coop.testnet",
+    "lin.banyan-coop.testnet",
+    "kofi.banyan-coop.testnet"
+  ],
+  "terms": {
+    "backing_bps": 10000,
+    "max_backing": "1000000000000000000000000",
+    "max_exposure": "2000000000000000000000000",
+    "auto_cover_max": "250000000000000000000000",
+    "max_dues": "500000000000000000000000",
+    "member_roles": [
+      "council",
+      "members"
+    ],
+    "cover_wait_secs": 600
+  },
+  "profiles": {
+    "priya.banyan-coop.testnet": "https://testnet.nearblocks.io/txns/5Geix5WwK4NUs9zewgxWz3RYeZHSPdGbNXK6UxaCFLjs",
+    "tomas.banyan-coop.testnet": "https://testnet.nearblocks.io/txns/CXbqDEnCtUrZKUvtxoiikPQSuQ6LuD6iYrR2JG4UfiQ4",
+    "rosa.banyan-coop.testnet": "https://testnet.nearblocks.io/txns/GUppunM6jeCWeYdd6hkFazwrpiUdXEEeJKY644WsvuwG",
+    "ama.banyan-coop.testnet": "https://testnet.nearblocks.io/txns/2Vp4SDeXu3e5J7qdtJJbHJEUCoP8LmnaEJ1cZTKsgMUb",
+    "lin.banyan-coop.testnet": "https://testnet.nearblocks.io/txns/9o9Ze4QU1pn4ntLryDKFVerzBULJTD9Jkjiy8Q6mgdpn",
+    "kofi.banyan-coop.testnet": "https://testnet.nearblocks.io/txns/HUV7sKsnJpWT2q32KngHRnzj6FrjnBe1WXTJSZkiiGKw"
+  },
+  "explorer": {
+    "contract": "https://testnet.nearblocks.io/address/v1.kitty-hq.testnet",
+    "dao": "https://testnet.nearblocks.io/address/banyan.sputnikv2.testnet"
+  },
+  "transactions": {
+    "deploy": "https://testnet.nearblocks.io/txns/5TcZ8hHZd4cuvAzmYrgeFgzxX5PLpFD9T6gdv4VbrJSn",
+    "init": "https://testnet.nearblocks.io/txns/4FKsaJqjcmVHDVWe3TLPNy7LMpySiESLbzx1umagEskG",
+    "dao": "https://testnet.nearblocks.io/txns/F8LBSNFqw3aiAqtxiXhKE7qqEDE5a3HQQtDJnXR6w84f",
+    "treasury": "https://testnet.nearblocks.io/txns/HSjj6g4rDuCWHnL1PsRtT4KVmw4UcfpmdwmNwf5BNbYC",
+    "warmup": [
+      "https://testnet.nearblocks.io/txns/EMG3xFahfS5eTX37f2ZyHtrfbQybLoUNyhrFuhgER8M4",
+      "https://testnet.nearblocks.io/txns/DyaBaDMRnqoeHhkVceAwgZgr4XD7M6Ad1F8hpJFNREx",
+      "https://testnet.nearblocks.io/txns/AnamGkRmebEymZrpxqDpC9FrNWQSsiLM3fnVDd8gxJMB",
+      "https://testnet.nearblocks.io/txns/GL95GDSuQVAoQDrz7hr9muJpscS8Sxg5bbhUDqJtTTWV"
+    ]
+  },
+  "code": {
+    "bytes": 352520,
+    "sha256": "85f9aff58524648513e02140ca1d9a320dc8009236b88179ba8cc82ceead8734"
+  }
+}
